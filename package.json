@@ -1,0 +1,16 @@
+{
+  "name": "weekend-challenge",
+  "version": "1.0.0",
+  "description": "Deberás de programar el [Juego de la vida de Conway](https://es.wikipedia.org/wiki/Juego_de_la_vida).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass styles.scss:styles.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
