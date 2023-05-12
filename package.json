@@ -4,15 +4,20 @@
   "description": "Deberás de programar el [Juego de la vida de Conway](https://es.wikipedia.org/wiki/Juego_de_la_vida).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass ./sass/styles.scss:styles.css -w",
+    "build": "tsc --watch",
+    "test": "jest --watchAll --coverage",
+    "test:prod": "jest --watchAll --coverage --watchAll=false",
     "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.62.1",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5"
   }
 }
