@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Deberás de programar el [Juego de la vida de Conway](https://es.wikipedia.org/wiki/Juego_de_la_vida).",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "sass": "sass ./sass/styles.scss:styles.css -w",
     "build": "tsc --watch",
@@ -14,10 +15,25 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "eslint": "^8.40.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^0.57.0",
     "husky": "^8.0.0",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.5"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
   }
 }
