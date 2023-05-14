@@ -1,11 +1,18 @@
-import { createBoard } from "./createBoard.js";
-import { printBoard } from "./createBoard.js";
+import { createBoard, printBoard } from "./createBoard.js";
+import { getNextGenerationBoard } from "./checkSurroundingCells.js";
 
-let generation = 0;
+const playGameOfLife = (rows: number, columns: number) => {
+  let generation = 0;
+  const board = createBoard(rows, columns);
+  console.log(printBoard(board));
 
-setInterval(() => {
-  const randomBoard = createBoard(10, 10);
-  console.log(printBoard(randomBoard));
-  generation++;
-  console.log(`Generation: ${generation}`);
-}, 300);
+  setInterval(() => {
+    console.clear();
+    const nextGeneration = getNextGenerationBoard(board);
+    console.log(printBoard(nextGeneration));
+    generation++;
+    console.log(`Generation: ${generation}`);
+  }, 200);
+};
+
+playGameOfLife(3, 3);
