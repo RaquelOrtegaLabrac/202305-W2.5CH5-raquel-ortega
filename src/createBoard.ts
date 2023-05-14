@@ -7,7 +7,18 @@ const createBoard = (rows: number, columns: number) => {
       arrayOfArrays[index][j] = Math.floor(Math.random() * 2);
     }
   }
-  console.log(arrayOfArrays);
+  return arrayOfArrays;
 };
 
-createBoard(4, 3);
+export default createBoard;
+
+// const killOrGiveLife = (cell) => {
+//   if ()
+
+// }
+
+// export default createBoard;
+
+// const checkSurroundingCells = () => {
+
+// }
