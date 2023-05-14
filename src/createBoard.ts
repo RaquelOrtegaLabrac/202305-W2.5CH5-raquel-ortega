@@ -1,4 +1,4 @@
-const createBoard = (rows: number, columns: number) => {
+export const createBoard = (rows: number, columns: number) => {
   const arrayOfArrays: number[][] = [];
 
   for (let index = 0; index < columns; index++) {
@@ -10,15 +10,21 @@ const createBoard = (rows: number, columns: number) => {
   return arrayOfArrays;
 };
 
-export default createBoard;
+export const printBoard = (board: number[][]) => {
+  console.clear();
 
-// const killOrGiveLife = (cell) => {
-//   if ()
+  let printedBoard = "";
+  for (let index = 0; index < board.length; index++) {
+    for (let j = 0; j < board[index].length; j++) {
+      if (board[index][j] === 1) {
+        printedBoard += "⬜";
+      }
 
-// }
-
-// export default createBoard;
-
-// const checkSurroundingCells = () => {
-
-// }
+      if (board[index][j] === 0) {
+        printedBoard += "⬛";
+      }
+    }
+    printedBoard += "\n";
+  }
+  return printedBoard;
+};

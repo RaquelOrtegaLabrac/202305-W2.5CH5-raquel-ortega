@@ -1,9 +1,11 @@
-import createBoard from "./createBoard.js";
+import { createBoard } from "./createBoard.js";
+import { printBoard } from "./createBoard.js";
 
-const randomBoard = createBoard(10, 10);
+let generation = 0;
 
-const gameOfLife = () => {
-  console.log(randomBoard);
-};
-
-gameOfLife();
+setInterval(() => {
+  const randomBoard = createBoard(10, 10);
+  console.log(printBoard(randomBoard));
+  generation++;
+  console.log(`Generation: ${generation}`);
+}, 300);
