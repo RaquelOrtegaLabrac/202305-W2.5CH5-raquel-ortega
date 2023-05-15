@@ -12,4 +12,4 @@ const playGameOfLife = (rows, columns) => {
         console.log(`Generation: ${generation}`);
     }, 200);
 };
-playGameOfLife(3, 3);
+playGameOfLife(20, 20);
